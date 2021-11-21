@@ -7,5 +7,6 @@ class Solution:
         current=0
         for i in range(2,n):
             current=prev1+prev2
+            prev1 = prev2
             prev2=current
         return current
