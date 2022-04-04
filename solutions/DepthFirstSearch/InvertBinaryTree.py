@@ -9,8 +9,8 @@ class Solution:
         if not root:
             return None
         
-        # swap the nodes
-        tmp = root.left
+        # swap the children nodes 
+        tmp = root.left# store the left in a temp variable
         root.left= root.right
         root.right=tmp
         
