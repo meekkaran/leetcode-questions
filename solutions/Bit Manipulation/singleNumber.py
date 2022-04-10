@@ -1,9 +1,9 @@
     def singleNumber(self, nums: List[int]) -> int:
         #solution 1
         c = Counter(nums)
-        for num in c:
-            if c[num] == 1:
-                return num
+        for i in nums:
+            if c[i] == 1:
+                return i
         
         
         #solution2
