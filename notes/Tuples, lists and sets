@@ -1,0 +1,3 @@
+TUPLES
+  NOTE!to convert a list into a tuple, the list should be sorted 
+  tuples cannot be modified  but lists can.
