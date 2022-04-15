@@ -13,3 +13,12 @@ class Solution:
             turtle = nums[turtle]
             hare = nums[hare]
         return turtle
+    
+    
+    #solution2 
+    #you could use dictionary because it does not pick duplicates
+    dict1 = {}
+    for i in nums:
+        if i in dict1:
+            return i
+        dict1[i] = 1
