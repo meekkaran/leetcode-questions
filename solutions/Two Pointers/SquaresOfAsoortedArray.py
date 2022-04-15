@@ -1,26 +1,23 @@
+
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
-        # if the array is empty return an empty array
-        if not nums or len(nums)==0:
-            return []
-        
-        #initialise the pointers
-        ans = [0] * len(nums)
-        left = 0
-        right = len(nums) - 1
-        insertLocation = right
-        
-        #when left pointer is less than right pointer
-        while left <= right:
-            leftSq = nums[left] * nums[left]
-            rightSq = nums[right] * nums[right]
-            #squares of the left and right values
-            if leftSq <= rightSq:
-                ans[insertLocation] = rightSq
-                rightSq -=1
-                insertLocation -=1
+        res = []
+        #two pointers, left and right pointers
+        l=0
+        r = len(nums)-1
+        while l <= r:
+            #if the square of the value at the left pointer is less that the square of the value at the right pointer, append the value at the              right pointer to the result then shift the right pointer backwards and vice versa
+            if nums[l]*nums[l] < nums[r]*nums[r]:
+                res.append(nums[r]*nums[r])
+                r -= 1
             else:
-                ans[insertLocation] = leftSq
-                leftSq +=1
-                insertLocation +=1
-        return ans
+                res.append(nums[l]*nums[l])
+                l += 1
+        return res[::-1]#reverse the result since you've been appending the values to the result
+            
+                
+
+        
+            
+            
+            
