@@ -7,6 +7,7 @@
 
 class Solution:
     def minDeletions(self, s: str) -> int:
+        # collections is a datatype that works like dictionaries e.g s ="aaabbbcc" = [[a:3,b:3,c:2 in] collections]
         count = collections.Counter(s)
         used = set()
         result = 0
