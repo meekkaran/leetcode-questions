@@ -5,7 +5,7 @@
 class Solution(object):
     def isPalindrome(self, x):
         y = str(x)
-        z = y[::1]#z is like reversing y
+        z = y[::-1]#z is like reversing y
         if z == y:
             return True
         else:
